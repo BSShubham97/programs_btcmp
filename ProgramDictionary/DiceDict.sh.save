@@ -1,0 +1,17 @@
+#! /bin/bash -x
+
+declare -A diceValues #Declaring the Dictionary
+
+#Assign values to the dictionary
+for ((i=0;i<=10;i++))
+do
+  diceRoll=$(( RANDOM%6 +1 ))
+echo "Roll Number:$i"
+echo "Face Value of Dice: $diceRoll"
+if (($diceRoll==$i))
+then
+    diceValues[$i]=$i
+    echo values:${diceValues[*]}
+fi
+done
+

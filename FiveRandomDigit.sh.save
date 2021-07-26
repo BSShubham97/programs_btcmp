@@ -1,0 +1,10 @@
+#! /bin/bash -x
+#print five three digit random numbe
+num=$((RANDOM%999))
+
+if [$num -gt 99 ]
+then 
+   a++
+echo "$num"
+fi
+done
